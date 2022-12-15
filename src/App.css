@@ -40,6 +40,8 @@ aside {
   padding: 50px 30px;
   font-size: 15px;
   min-width: 500px;
+  min-height: 400px;
+  margin-bottom: 50px;
   box-shadow: 0px 0px 15px hsl(227, 25%, 85%);
   color: hsl(225, 20%, 60%);
   margin-top: 15px;

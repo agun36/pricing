@@ -1,6 +1,5 @@
 import './App.css'
 import { useState } from 'react'
-// import Header from './component/Header'
 function App() {
   const [isChecked, setIsChecked] = useState(false)
   const [price, setPrice] = useState(0)
