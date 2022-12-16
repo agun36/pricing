@@ -167,7 +167,7 @@ aside {
 }
 
 hr {
-  border: hsl(0, 0%, 98%);
+  border: hsla(0, 0%, 98%, 0);
   margin: 30px;
 }
 
