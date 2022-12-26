@@ -6,7 +6,7 @@ export const PricingPage = () => {
   return (
     <main className='container'>
       <HeaderComp />
-      <div style={{ margin: 'auto' }}>
+      <div style={{ margin: '0 auto' }}>
         <PricingCard />
       </div>
     </main>
