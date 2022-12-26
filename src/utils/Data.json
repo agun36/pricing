@@ -1,7 +1,7 @@
 [
-  { "pageviews": "10k", "pricemonthly": "8" },
-  { "pageviews": "50k", "pricemonthly": "12" },
-  { "pageviews": "100k", "pricemonthly": "16" },
-  { "pageviews": "500k", "pricemonthly": "24" },
-  { "pageviews": "1m", "pricemonthly": "36" }
+  { "pageviews": "10k", "pricemonthly": 8 },
+  { "pageviews": "50k", "pricemonthly": 12 },
+  { "pageviews": "100k", "pricemonthly": 16 },
+  { "pageviews": "500k", "pricemonthly": 24 },
+  { "pageviews": "1m", "pricemonthly": 36 }
 ]

@@ -1,12 +1,14 @@
 import './App.css'
-import { useState } from 'react'
-
+import { BrowserRouter, Route, Routes } from 'react-router-dom'
+import { PricingPage } from './pages/pricingPage'
 
 function App() {
-  
-
   return (
-   
+    <BrowserRouter>
+      <Routes>
+        <Route path='/' element={<PricingPage />} />
+      </Routes>
+    </BrowserRouter>
   )
 }
 
