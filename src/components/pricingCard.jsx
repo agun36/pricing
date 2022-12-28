@@ -4,8 +4,10 @@ import DataList from '../utils/Data.json'
 export const PricingCard = () => {
   const [isChecked, setIsChecked] = useState(true)
   const [selectedRange, setSelectedRange] = useState(DataList[0])
+  const [rangeValue, setRangeValue] = useState(0)
 
   const handleChange = (value) => {
+    setRangeValue(value)
     setSelectedRange(DataList[value])
   }
 
@@ -22,7 +24,7 @@ export const PricingCard = () => {
   return (
     <section className='pricing-card'>
       <div className='pricing-title'>
-        <div className='page-view'>{selectedRange.pageviews} previews</div>
+        <div className='page-view'>{selectedRange.pageviews} Pageviews</div>
         <div className='price'>
           {
             <span>
@@ -39,7 +41,7 @@ export const PricingCard = () => {
                   })}`}
             </span>
           }
-          <span className='month'>/{isChecked ? 'yearly' : 'monthly'}</span>{' '}
+          <span className='month'>/{isChecked ? 'year' : 'month'}</span>{' '}
         </div>
       </div>
       <div className='progress-field'>
@@ -49,29 +51,38 @@ export const PricingCard = () => {
             className='myrange'
             max={4}
             onChange={(e) => handleChange(e.target.value)}
+            style={{ backgroundSize: `${(rangeValue / 4) * 100}%` }}
           />
         </div>
+
         <div className='monthly'>
-          <span>monthly billing</span>
-          <label className='switch'>
+          <span>Monthly billing</span>
+
+          <div className='onoffswitch'>
             <input
               type='checkbox'
+              className='onoffswitch-checkbox'
+              id='myonoffswitch'
               checked={isChecked}
+              tabIndex={0}
               onChange={(e) => handleChecked(e.target.checked)}
             />
-            <span className='slider'></span>
-          </label>
+            <label className='onoffswitch-label' htmlFor='myonoffswitch'>
+              <span className='onoffswitch-inner'></span>
+              <span className='onoffswitch-switch'></span>
+            </label>
+          </div>
           <span>Yearly billing</span>
           <span className='discount'>25% discount</span>
         </div>
         <hr />
         <div className='start-period'>
           <ul>
-            <li>unlimited websites</li>
+            <li>Unlimited websites</li>
             <li>100% data ownership</li>
-            <li>email reports</li>
+            <li>Email reports</li>
           </ul>
-          <button action='Start my trial'>start my trial</button>
+          <button action='Start my trial'>Start my trial</button>
         </div>
       </div>
     </section>
